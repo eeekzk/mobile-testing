@@ -1,4 +1,5 @@
 Test Case 1 - Create a Buy List
+
 Steps:
 1. Enter the name of the new Buy list
 2. Add a Buy list
@@ -7,9 +8,11 @@ Steps:
 5. Check that the Buy list is displayed correctly
 
 Test Case 2 Add a Product To Buy List
+
 Prerequisites:
 1. Create a Buy List
-   Steps:
+   
+Steps:
 1. Enter a product name
 2. Enter a price
 3. Enter an amount
@@ -21,6 +24,7 @@ Prerequisites:
 
 
 Test Case 3 Add a New Category
+
 Steps:
 1. Click on the Action menu
 2. Click on Settings
@@ -33,6 +37,7 @@ Steps:
 9. Move a new category from the end of the list using Drag&Drop
 
 Test Case 4 Add a Product To My List
+
 Steps:
 1. Click on the Action menu
 2. Click on My List
@@ -46,10 +51,12 @@ Steps:
 10. Check that the product is displayed correctly
 
 Test Case 5 Add a Product To My List From the Buy List
+
 Prerequisites:
 1. Create a Buy List
 2. Add a product to the Buy list
-   Steps:
+
+Steps:
 1. Make a long press on the product
 2. In the menu that appears, click on Add to my list
 3. Click on the Action menu
@@ -57,10 +64,12 @@ Prerequisites:
 5. Check the added product appeared in the list
 
 Test Case 6 Take a Product From My List
+
 Prerequisites:
 1. Create a Buy List
 2. Add a product to the Buy list
-   Steps:
+
+Steps:
 1. Make a long press on the product
 2. In the menu that appears, click on Add to my list
 3. Click on the Action menu
@@ -76,9 +85,11 @@ Prerequisites:
 13. Check the product in the Buy list
 
 Test Case 7 Edit a Buy List
+
 Prerequisites:
 1. Create a Buy List
-   Steps:
+
+Steps:
 1. Click on the Edit button on the Buy List
 2. Enter a new name for the Buy List
 3. Click OK to confirm the change
@@ -86,10 +97,12 @@ Prerequisites:
 
 
 Test Case 8 Edit a Product
+
 Prerequisites:
 1. Create a Buy List
 2. Add a product to the Buy list
-   Steps:
+
+Steps:
 1. Make a long press on the product
 2. In the menu that appears, click on Edit
 3. Enter new product data
@@ -97,16 +110,20 @@ Prerequisites:
 5. Check that the change is displayed correctly
 
 Test Case 9 DeleteBuyList
+
 Prerequisites:
 1. Create a Buy List
-   Steps:
+
+Steps:
 1. Click on the cross button on the Buy List
 2. Click OK to confirm the deletion
 
 Test Case 10 Delete a Product
+
 Prerequisites:
 1. Create a Buy List
 2. Add a product to the Buy list
-   Steps:
+
+Steps:
 1. Make a long press on the product
 2. In the menu that appears, click on Remove
