@@ -1,4 +1,28 @@
-Test Case 1 - Create a Buy List
+
+### Testing the mobile android app Shopping List
+
+#### INSTALLATION
+
+* Install Android Studio and Configure the Emulator (Android 8.0 x86)
+* Add to .bash_profile
+>     export ANDROID_HOME=your way to Library/Android/sdk
+>     export PATH=$PATH:/usr/local/git/bin:/usr/local/bin:
+>     export PATH=$PATH:$ANDROID_HOME/platform-tools
+>     export PATH=$PATH:$ANDROID_HOME/tools
+>     export PATH=$PATH:$ANDROID_HOME/tools/bin
+>     export PATH=$PATH:$ANDROID_HOME/emulator
+
+* Install Appium Server and uiautomator2 driver
+>     sudo npm install -g appium@next
+>     appium driver install uiautomator2
+
+#### RUN TESTS
+* Launch the Emulator
+* Run the Test
+
+#### TEST CASES
+
+**Test Case 1 - Create a Buy List**
 
 Steps:
 1. Enter the name of the new Buy list
@@ -7,11 +31,11 @@ Steps:
 4. Go back to the list of Buy lists
 5. Check that the Buy list is displayed correctly
 
-Test Case 2 Add a Product To Buy List
+**Test Case 2 Add a Product To Buy List**
 
 Prerequisites:
 1. Create a Buy List
-   
+
 Steps:
 1. Enter a product name
 2. Enter a price
@@ -23,7 +47,7 @@ Steps:
 8. Check that the product is displayed correctly
 
 
-Test Case 3 Add a New Category
+**Test Case 3 Add a New Category**
 
 Steps:
 1. Click on the Action menu
@@ -36,7 +60,7 @@ Steps:
 8. Make a scroll and find a new category in the list
 9. Move a new category from the end of the list using Drag&Drop
 
-Test Case 4 Add a Product To My List
+**Test Case 4 Add a Product To My List**
 
 Steps:
 1. Click on the Action menu
@@ -50,7 +74,7 @@ Steps:
 9. Add the product to the Buy list
 10. Check that the product is displayed correctly
 
-Test Case 5 Add a Product To My List From the Buy List
+**Test Case 5 Add a Product To My List From the Buy List**
 
 Prerequisites:
 1. Create a Buy List
@@ -63,7 +87,7 @@ Steps:
 4. Click on Add from my list
 5. Check the added product appeared in the list
 
-Test Case 6 Take a Product From My List
+**Test Case 6 Take a Product From My List**
 
 Prerequisites:
 1. Create a Buy List
@@ -84,7 +108,7 @@ Steps:
 12. Click OK to add the product to the Buy list
 13. Check the product in the Buy list
 
-Test Case 7 Edit a Buy List
+**Test Case 7 Edit a Buy List**
 
 Prerequisites:
 1. Create a Buy List
@@ -95,8 +119,7 @@ Steps:
 3. Click OK to confirm the change
 4. Check that the change is displayed correctly
 
-
-Test Case 8 Edit a Product
+**Test Case 8 Edit a Product**
 
 Prerequisites:
 1. Create a Buy List
@@ -109,7 +132,7 @@ Steps:
 4. Click on the save icon
 5. Check that the change is displayed correctly
 
-Test Case 9 DeleteBuyList
+**Test Case 9 DeleteBuyList**
 
 Prerequisites:
 1. Create a Buy List
@@ -118,7 +141,7 @@ Steps:
 1. Click on the cross button on the Buy List
 2. Click OK to confirm the deletion
 
-Test Case 10 Delete a Product
+**Test Case 10 Delete a Product**
 
 Prerequisites:
 1. Create a Buy List
