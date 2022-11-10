@@ -36,7 +36,7 @@ public class BaseTest {
                     getClass().getClassLoader().getResourceAsStream("capabilities.json"), new TypeReference<Map<String, String>>() {});
             UiAutomator2Options options = new UiAutomator2Options(typedMap);
             options.setDeviceName("TestEmulator");
-            options.setApp("/Users/eeekzk/IdeaProjects/TestingApp/src/test/resources/ShoppingList-1.6.apk");
+            options.setApp("src/test/resources/ShoppingList-1.6.apk");
             this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         } catch (IOException e) {
             e.printStackTrace();
