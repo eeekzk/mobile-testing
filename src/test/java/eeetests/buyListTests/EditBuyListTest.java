@@ -13,8 +13,8 @@ public class EditBuyListTest extends BaseTest {
         BuyPageObjects objects = new BuyPageObjects(this.driver);
         this.steps.addBuyList();
         assertEquals(objects.listName.getText(),nameBuyList);
-        this.driver.navigate().back();
-        this.driver.navigate().back();
+        elements.back();
+        elements.back();
         assertEquals(objects.listTitle.getText(),nameBuyList);
         objects.editBuyListButton.click();
         objects.changeNameBuyList.clear();

@@ -14,8 +14,8 @@ public class CreateBuyListTest extends BaseTest {
         objects.editNameBuyList.sendKeys(nameBuyList);
         objects.addBuyListButton.click();
         assertEquals(objects.listName.getText(),nameBuyList);
-        this.driver.navigate().back();
-        this.driver.navigate().back();
+        elements.back();
+        elements.back();
         assertEquals(objects.listTitle.getText(),nameBuyList);
     }
 }
