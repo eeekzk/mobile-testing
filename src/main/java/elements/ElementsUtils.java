@@ -1,6 +1,7 @@
 package elements;
 
 import com.google.common.collect.ImmutableMap;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -23,5 +24,10 @@ public class ElementsUtils {
 
     public void back() {
         this.driver.navigate().back();
+    }
+
+    public void scrollToText(String text)
+    {
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));")).click();
     }
 }

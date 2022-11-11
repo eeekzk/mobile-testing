@@ -36,5 +36,8 @@ public class StepsPageObjects {
     public WebElement productUnit;
 
     @FindBy(id = "com.slava.buylist:id/spinner2")
+    public WebElement productCategoryButton;
+
+    @FindBy(id = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[10]")
     public WebElement productCategory;
 }
