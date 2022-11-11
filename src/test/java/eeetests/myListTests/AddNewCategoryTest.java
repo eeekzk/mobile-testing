@@ -2,12 +2,13 @@ package eeetests.myListTests;
 
 import com.google.common.collect.ImmutableMap;
 import eeetests.BaseTest;
-import eeetests.pageObjects.MyListPageObjects;
+import pageObjects.MyListPageObjects;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.Test;
 
 public class AddNewCategoryTest extends BaseTest {
+
     @Test
     public void checkAddCategory() {
         //use Drag&Drop

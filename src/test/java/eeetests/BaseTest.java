@@ -1,6 +1,6 @@
 package eeetests;
 
-import eeetests.elements.ElementsUtils;
+import elements.ElementsUtils;
 import eeetests.steps.ShoppingSteps;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -12,7 +12,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Map;
@@ -35,8 +34,6 @@ public class BaseTest {
             Map<String, String> typedMap = new ObjectMapper().readValue(
                     getClass().getClassLoader().getResourceAsStream("capabilities.json"), new TypeReference<Map<String, String>>() {});
             UiAutomator2Options options = new UiAutomator2Options(typedMap);
-            options.setDeviceName("TestEmulator");
-            options.setApp("src/test/resources/ShoppingList-1.6.apk");
             this.driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         } catch (IOException e) {
             e.printStackTrace();

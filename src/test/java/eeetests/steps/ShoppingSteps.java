@@ -1,33 +1,38 @@
 package eeetests.steps;
 
+import eeetests.BaseTest;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import pageObjects.StepsPageObjects;
 
-public class ShoppingSteps {
+public class ShoppingSteps extends BaseTest {
+
     private final AndroidDriver driver;
 
     public ShoppingSteps(AndroidDriver driver) {
         this.driver = driver;
     }
 
-    @Step("addBuyList step")
+    @Step()
     public void addBuyList() {
-        this.driver.findElement(By.id("com.slava.buylist:id/editText1")).sendKeys("IKEA");
-        this.driver.findElement(By.id("com.slava.buylist:id/button2")).click();
+        StepsPageObjects objects = new StepsPageObjects(driver);
+        objects.editNameBuyList.sendKeys("IKEA");
+        objects.addBuyListButton.click();
     }
 
     @Step("addProductToBuyList step")
     public void addProductToBuyList() {
-        this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.EditText")).sendKeys("Sofa");
-        this.driver.findElement(By.id("com.slava.buylist:id/editText2")).sendKeys("123");
-        this.driver.findElement(By.id("com.slava.buylist:id/editText3")).sendKeys("1");
-        this.driver.findElement(By.id("com.slava.buylist:id/editText4")).sendKeys("Bedroom");
-        this.driver.findElement(By.id("com.slava.buylist:id/spinner1")).click();
-        this.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[10]")).click();
-        this.driver.findElement(By.id("com.slava.buylist:id/spinner2")).click();
+        StepsPageObjects objects = new StepsPageObjects(driver);
+        objects.productName.sendKeys("Sofa");
+        objects.productPrice.sendKeys("123");
+        objects.productAmount.sendKeys("1");
+        objects.productComment.sendKeys("Bedroom");
+        objects.productValue.click();
+        objects.productUnit.click();
+        objects.productCategory.click();
         this.driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Confection\"));")).click();
-        this.driver.findElement(By.id("com.slava.buylist:id/button2")).click();
+        objects.addBuyListButton.click();
     }
 }

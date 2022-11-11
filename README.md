@@ -18,6 +18,7 @@
 
 #### RUN TESTS
 * Launch the Emulator
+* In the file capabilities.json write the name of your Emulator in DeviceName
 * Run the Test
 
 #### TEST CASES
