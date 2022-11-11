@@ -2,6 +2,7 @@ package eeetests.myListTests;
 
 import com.google.common.collect.ImmutableMap;
 import eeetests.BaseTest;
+import org.openqa.selenium.WebElement;
 import pageObjects.MyListPageObjects;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -20,6 +21,7 @@ public class AddNewCategoryTest extends BaseTest {
         objects.editCategoryName.sendKeys("New Category");
         objects.okButton.click();
         this.driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"New Category\"));"));
-        this.driver.executeScript("mobile: dragGesture", ImmutableMap.of("elementId", ((RemoteWebElement)objects.sourceNewCategory).getId(), "endX", 600, "endY", 1200));
+        WebElement ele = objects.sourceNewCategory;
+        this.elements.dragDrop(ele);
     }
 }

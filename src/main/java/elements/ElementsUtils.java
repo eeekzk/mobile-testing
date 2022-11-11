@@ -16,4 +16,8 @@ public class ElementsUtils {
     public void longPressAction(WebElement ele) {
         this.driver.executeScript("mobile: longClickGesture", ImmutableMap.of("elementId", ((RemoteWebElement)ele).getId(), "duration", 2000));
     }
+
+    public void dragDrop(WebElement ele) {
+        this.driver.executeScript("mobile: dragGesture", ImmutableMap.of("elementId", ((RemoteWebElement)ele).getId(), "endX", 600, "endY", 1200));
+    }
 }
